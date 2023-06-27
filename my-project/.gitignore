@@ -1,0 +1,4 @@
+/target/jira/jira-original.war
+/target/jira/jira.war
+/target/container/tomcat8x/cargo-jira-home/webapps/jira.war
+/target/container/tomcat8x/cargo-jira-home/jira-heap-dump.hprof

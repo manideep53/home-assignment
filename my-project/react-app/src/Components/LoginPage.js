@@ -35,36 +35,6 @@ const LoginPage = () => {
   };
 
 
-  // const checkIfUserIsAdmin = async (username) => {
-  //   try {
-  //     const instance = axios.create({
-  //       baseURL: 'http://localhost:2990/jira',
-  //       proxy: true, // Disable default proxy handling
-  //       headers: {
-  //         common: {
-  //           // Add any common headers if required
-  //         },
-  //       },
-  //     });
-
-  //     const response = await instance.get(`/rest/api/2/user?username=${username}`, {
-  //       auth: {
-  //         username: 'admin',
-  //         password: 'admin',
-
-  //       },
-
-  //     });
-  
-  //     const userData = response.data;
-  //     console.log(userData);
-  //   } catch (error) {
-  //     console.error('Error fetching user details:', error);
-  //     return false;
-  //  }
-  // };
-
-  // checkIfUserIsAdmin(username);
 
 
   const handleSubmit = (e) => {
