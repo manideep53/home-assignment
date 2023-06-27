@@ -5,10 +5,6 @@ import TextField from '@atlaskit/textfield';
 import { useNavigate } from 'react-router-dom';
 import { Field } from '@atlaskit/form';
 import { FormFooter } from '@atlaskit/form';
-import axios from 'axios';
-
-
-
 
 
 
@@ -19,13 +15,6 @@ const LoginPage = () => {
   const [errorMessage, setErrorMessage] = useState('');
   
 
-
-
-  
-
-  
-
-
   const handleUsernameChange = (value) => {
     setUsername(value);
   };
@@ -35,9 +24,7 @@ const LoginPage = () => {
   };
 
 
-
-
-  const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!username || !password) {
@@ -47,9 +34,8 @@ const LoginPage = () => {
 
     if (username === 'admin' && password === 'admin') {
       
-        // Redirect or show an error message for non-admin users
-    
-      setErrorMessage('');
+       
+    setErrorMessage('');
       
 
      
@@ -65,9 +51,7 @@ const LoginPage = () => {
   };
 
   
-  
-
-  return (
+    return (
     <div className="container">
       <div className="row justify-content-center mt-5">
         <div className="col-lg-4">
