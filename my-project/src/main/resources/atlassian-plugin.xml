@@ -1,0 +1,39 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="my-project"/>
+    
+    <!-- add our web resources -->
+    <web-resource key="my-project-resources" name="my-project Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="my-project.css" location="/css/my-project.css"/>
+        <resource type="download" name="my-project.js" location="/js/my-project.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>my-project</context>
+    </web-resource>
+
+<!-- admin page -->
+   <servlet key="admin-servlet" class="com.example.project.admin.AdminServlet">
+  <url-pattern>/plugins/servlet/myplugin/admin</url-pattern>
+</servlet>
+
+
+<!-- React-->
+   <web-resource key="react-app-resources" name="React App Resources">
+    <resource type="download" name="main.03fee2c2.js" location="/META-INF/resources/static/js/main.b002f6d6.js"/>
+    <resource type="download" name="main.073c9b0a.css" location="/META-INF/resources/static/css/main.46e08f16.css"/>
+    <resource type="download" name="favicon.ico" location="/META-INF/resources/favicon.ico"/>
+    <!-- Add other necessary resources -->
+    <context>react-app</context>
+</web-resource>
+    
+</atlassian-plugin>
